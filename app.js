@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const auth = require('./auth.json')
+const welcome = require('./features/welcome.js')
+const message = require('./features/message.js')
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -7,10 +9,13 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  console.log(msg.content)
-  if (msg.content === "help") {
-    msg.reply(`Checkout this https://media.discordapp.net/attachments/511397823623856138/528567621600149504/xkro_subscription_english.jpg?width=419&height=601`);
-  }
+  message.handle(msg, Discord)
 });
+
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  welcome.handle(member)
+});
+
 
 client.login(auth.token);

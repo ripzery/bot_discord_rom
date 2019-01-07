@@ -1,0 +1,142 @@
+Commands:
+
+UI
+/help - Show all available commands.
+/settings - Show all enabled modules.
+/settings reset - reset your settings to default. Useful when you messed up with the values.
+
+Visuals
+/hp [on/off] - Turn on/off Target Info.
+/fps # - unlock and set FPS of the game. Value: 1-120.
+/refresh - refresh client and dump caches.
+/ping - check your current connectivity latency.
+/recon - reconnect when you get disconnected.
+
+Enhanced Auto TrickDead Module
+/afk [on/off] - turn on/off auto TD.
+/afk [hp/sp] [min,max] - set hp/sp conditions
+
+Eg:
+/afk on -> turn on module
+/afk sp 30,90 -> set sp condition to min: 30% and max: 90%. Meaning, if your sp is below 30% it will use TD and get back up when sp reaches 90%.
+
+Enhanced Auto Skill Extension
+/as [on/off] - turn on/off auto-skill extension.
+/as list - list available skills that can be extended. (Check System Message)
+/as [x,y,z...] - set your desired manual skill slot as auto-skills.
+/as reset - reset current list
+
+Eg:
+/as 1,3,6,11 - set manual skill slot number 1, 3, 6 and 11 as auto skills.
+/as on - turn on module
+
+Self-Target AoE Skills
+/selfcast [on/off] - turn on/off module.
+/selfcast all - selt-target all AoE Skills.
+/selfcast list - list all ID of available AoE skills.
+/selfcast id1,id2,id3... - set specific skill-id as self-target.
+/selfcast reset - reset the list.
+
+Eg:
+/selfcast on - turn on module.
+/selfcast 800,91 - ID: 800 = Meteor Storm, ID: 91 = Safety Wall.
+
+Priest Exclusive Commands
+/support [on/off] - Remove buffing restriction of some buffs that will be casted only when in engage mode in follow state.
+
+/buffer [on/off] - Buff surrounding specific characters even without party. (Limited to non-party buffs such as heal/kyrie/bless etc.)
+/buffer leader_id - Set priest buffing to specific id
+Shortcut: PM your slave '-buffme' it will automatically add the whisperer to the list.
+/buffer reset - reset list
+
+Note: Uncheck RO-M Power-Saving from settings.
+
+Creator Auto Cast Hell Plant
+/hplant [on/off] - turn on/off the module.
+/hplant [1/2/3] - save your current position as Hell Plant's drop point. Can be used up to 3 positions.
+
+Eg:
+/hplant 1 - save your current position as 1st Hell Plant's drop point.
+/hplant on - turn on module.
+
+Gear Switching Feature
+/gs save [1 to 10] - Save your current equipment and card settings to specific slot numbers.
+/gs set [1 to 10] - Increase/decrease maximum emoji gear switch set.
+
+To use switching: Open Emoji Window and click the pringles emoji.
+
+Instant Market/Shop/Exchange
+/shop or /market - Open Exchange Shop
+/gdonate - Open Guilde Donate Window
+/buy [shop] - Open a specific shop window.
+Shops:
+1. Greedy - Open Greedy Shop.
+2. Starweapon - Open Starweapon Shop.
+3. Event - Event Dealer Shop.
+4. Tool - Tool Dealer Shop.
+5. Funtoy/Bard - Bard Shop.
+6. Advskill - Advance Skill Shop.
+7. Mora1/Mora2 - Open Mora coin shop 1 or 2.
+8. Food/Food1 - Open Food A and Food B shops.
+9. Cook1/Cook2/Cook3 - Cook Ingredients Shops.
+10. Cny1/Cny2 - Chinese New Year.
+11. Producer - Producer Event.
+12. Banquet - Fantasy Banquet (Talk to Ariel after activation)
+13. Lucky - Open Lucky Shop
+
+Warp | Teleport Modules
+/ch # - change channel ( CN Server )
+/ch cc xx - CC is country code (PH/EN/VN/TH/ID) and XX is the channel (1-100)
+Note; change channel doesn't work on all maps
+
+/go - drop you to your spawn point. 
+/go list - List all unlocked maps.
+/go mapid - Go to specific map. (Requirements: Pet,Cat, Monster or NPC beside you.)
+
+/tele - try and use it to whatever purpose it may serve you.
+
+/warp - Use kafra warp services everywhere. (Requirements: Pet,Cat,Monster or NPC beside you.)
+/warp [on/off] - to enable/disable emoji shortcuts
+MVP Hunting Module
+/mvp [on/off] - turn on/off module.
+/mvp [auto/manual] - Set semi-tracking to Auto/Manual.
+/mvp [mini/mvp/all] - Set notification and target to MVP/MINI/ALL only.
+
+Utility Modules
+-- Auto Execution of Quest --
+/quest [on/off] - Auto Execution of Quest.
+/quest [warp | no-warp] - Turn on/off auto warping for quest.
+
+-- Lockspot Module --
+/ls [on/off] - Turn on off module. Saves your current position as return point.
+/ls radius - Sets farming radius. Radius can be set from 0-999
+
+-- Auto Fly Wing --
+/autofw [on/off] - enable auto fly wing when your HP drops below 30% and get back to spot after HP reaches 100%. Good for those who lures monster to kill your farming character.
+
+-- EXP/Zeny Calculator --
+/zeny [on/off] - Zeny Calculator
+/exp [on/off] - Exp Calculator
+
+-- Endless Tower Access --
+/et - open endless tower anywhere.
+
+-- NPC Enhanced Feature --
+/npc [on/off] - turn on/off UI Warp and UI Storage for npcs
+
+-- Zoom Modification --
+/fov # - use them as you like.
+/zoom # - use them as you like.
+
+-- Auto Accept PT/ET --
+/autopt [on/off] - auto accepts incoming PT request.
+/autoet [on/off] - auto accepts incoming ET request.
+
+-- AUto Follow without Party --
+/follow [on/off] - turn on off module
+/follow leaderid - set leaderid to follow.
+
+Eg:
+/follow 43033333333 - set leaderid, and follow it whenever it is visible in the map.
+/follow on - turn on module
+or PM your slave with '-followme'
