@@ -1,5 +1,5 @@
 {
-  "name": "test-bot",
+  "name": "rom_ui_discord_bot",
   "version": "1.0.0",
   "description": "A discord bot for specifically helping a new joiner of ROM add-on group.",
   "main": "app.js",
