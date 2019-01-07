@@ -4,13 +4,17 @@
   "description": "A discord bot for specifically helping a new joiner of ROM add-on group.",
   "main": "app.js",
   "author": "ไอทั้งวัน",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
   "dependencies": {
     "discord.io": "^2.5.3",
     "discord.js": "^11.4.2",
     "winston": "2.4.0"
   },
   "license": "MIT",
-  "engines" : {
+  "engines": {
     "node": "v8.9.1"
   }
 }
