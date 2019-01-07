@@ -8,5 +8,9 @@
     "discord.io": "^2.5.3",
     "discord.js": "^11.4.2",
     "winston": "2.4.0"
+  },
+  "license": "MIT",
+  "engines" : {
+    "node": "v8.9.1"
   }
 }
