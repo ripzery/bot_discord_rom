@@ -18,6 +18,8 @@ const handle = (msg, discord) => {
     msg.channel.send(`https://docs.google.com/document/d/1SlelM4TMurmxE_LzoObMnPwtgLaoWe9dcBHVHlBoRgA/`);
   } else if(msg.content.indexOf("/guide --en") === 0 || msg.content === "/guide") {
     msg.channel.send(`https://xkromui.com/features.html`);
+  } else if(msg.content.indexOf("/payment") === 0) {
+    msg.channel.send(`https://xkromui.com/subscribe/`)
   }
 }
 
