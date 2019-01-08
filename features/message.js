@@ -38,7 +38,7 @@ const handle = (msg, discord) => {
       }]
     });
   } else if (matchAny(msg, keywords.subscribeThSlang)) {
-    msg.channel.send("วิธีสมัครตามรูปด้านล่างเลยครับ ราคา 5.53 USD โดยรองรับผ่าน Paypal \nแต่ถ้าอยากสะดวกหรือบ้านรวยอยากจ่ายแพงๆ ก็มีคนขายจ้า ชื่อ \"ขาย Code Add-on\" อะไรสักอย่างเนี่ยแหละ", {
+    msg.channel.send("วิธีสมัครตามรูปด้านล่างเลยครับ ราคา 5.53 USD โดยรองรับผ่าน Paypal \nแต่ถ้าอยากสะดวกจ่ายผ่าน TrueMoney Wallet ได้หรือบ้านรวยอยากจ่ายแพงๆ ก็มีคนขายจ้า ชื่อ \"ขาย Code Add-on\" อะไรสักอย่างเนี่ยแหละ", {
       files: [{
         attachment: "assets/subscribe_th.jpg",
         name: "subscribe_th.jpg"
