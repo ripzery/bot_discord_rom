@@ -5,7 +5,7 @@ const keywords = {
   guideTh: ["!guide --th"],
   payment: ["!payment"],
   mvp: ["!mvp", "วิธีใช้ /mvp"],
-  noob: ["!noob", "ลงหัวบอส"],
+  noob: ["ลงหัวบอส", "วิงลงบอส"],
   read: ["!read"],
   helpEn: ["!help", "!help --en"],
   helpTh: ["!help --th"],
@@ -46,7 +46,7 @@ const handle = (msg, discord) => {
         name: "ban.jpg"
       }]
     })
-  } else if (matchExactAny(msg, keywords.noob)) {
+  } else if (matchAny(msg, keywords.noob)) {
     msg.channel.send(`พูดอีกที พูดอีกที พูดอีกทีได้หรือเปล่า \nฉันไม่ได้ฟัง ที่อยากจะฟังมาตั้งนาน~`, {
       files: [{
         attachment: "assets/noob.jpg",
