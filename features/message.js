@@ -69,11 +69,13 @@ const handle = (msg, discord) => {
         name: "read.jpg"
       }]
     })
-  } else if (matchExactAny(msg, keywords.dm)) {
+  } else if (matchAny(msg, keywords.dm)) {
     const user = msg.mentions.users.first()
     if (user) {
       const msgs = msg.content.split(" ").slice(2).join(" ")
       user.send(msgs)
+    } else {
+      msg.channel.send(`You didn't specify who to send.`)
     }
   } else if (matchExactAny(msg, keywords.helpTh)) {
     msg.channel.send(`
