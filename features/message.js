@@ -11,7 +11,8 @@ const keywords = {
   helpEn: ["!help", "!help --en"],
   helpTh: ["!help --th"],
   ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง", "ใครโดนแล้วบ้าง"],
-  dm: ["!dm"]
+  dm: ["!dm"],
+  map: ["!map"]
 }
 
 const ch = (msg, name) => msg.guild.channels.find(channel => channel.name === name).toString();
@@ -48,6 +49,73 @@ const handle = (msg, discord) => {
         name: "ban.jpg"
       }]
     })
+  } else if (matchExactAny(msg, keywords.map)) {
+    msg.channel.send(`
+    -- Map List --
+\`\`\`
+To Activate type @go #
+ID: 1     Map: Prontera
+ID: 2     Map: Prt South Field
+ID: 3     Map: Prt Sewer 1F
+ID: 4     Map: Prt Sewer 2F
+ID: 5     Map: Prt West Field
+ID: 6     Map: Prt Maze
+ID: 7     Map: Izlude
+ID: 8     Map: Sunken Ship
+ID: 9     Map: Ghost Ship
+ID: 10     Map: Byalan Island
+ID: 11     Map: Undersea Cave
+ID: 12     Map: Undersea Temple
+ID: 13     Map: Geffen
+ID: 14     Map: Mt. Mjolnir
+ID: 15     Map: Ant Cave
+ID: 16     Map: Morroc
+ID: 17     Map: Pyramid 1F
+ID: 18     Map: Payon
+ID: 19     Map: Payon South Field
+ID: 20     Map: Payon Cave 1F
+ID: 21     Map: Pyramid 2F
+ID: 22     Map: Payon Cave 2F
+ID: 23     Map: Orc Village
+ID: 24     Map: Geffen Tower
+ID: 25     Map: Orc Dungeon
+ID: 26     Map: Dragon Plateau
+ID: 27     Map: Glast Heim
+ID: 28     Map: GH Culvert
+ID: 29     Map: GH Chivalry
+ID: 30     Map: GH Lobby
+ID: 31     Map: Misty Island
+ID: 32     Map: Payon Forest
+ID: 33     Map: Goblin Forest
+ID: 34     Map: Kordt Forest
+ID: 35     Map: Sograt Desert
+ID: 37     Map: GH Churchyard
+ID: 38     Map: Ant Hell
+ID: 42     Map: Prt North Field
+ID: 43     Map: Al De Baran
+ID: 44     Map: Clock Tower 1F
+ID: 45     Map: Clock Tower 2F
+ID: 46     Map: Clock Tower Basement
+ID: 48     Map: Lutie
+ID: 49     Map: Toy Factory 1F
+ID: 50     Map: Toy Factory 2F
+ID: 53     Map: Pyramid 3F
+ID: 60     Map: Glast Heim Hall
+ID: 62     Map: Amatsu
+ID: 63     Map: Yuno
+ID: 64     Map: Border Checkpoint
+ID: 65     Map: Einbroch Field
+ID: 66     Map: Magma Dungeon 1F
+ID: 67     Map: Magma Dungeon 2F
+ID: 68     Map: Magma Dungeon 3F
+ID: 70     Map: Niflheim
+ID: 71     Map: Mist Forest
+ID: 75     Map: Umbala
+ID: 73     Map: Hamelin
+ID: 72     Map: Skellington
+ID: 74     Map: Hvergelmir
+\`\`\`
+    `)
   } else if (matchAny(msg, keywords.noob)) {
     msg.channel.send(`พูดอีกที พูดอีกที พูดอีกทีได้หรือเปล่า \nฉันไม่ได้ฟัง ที่อยากจะฟังมาตั้งนาน~`, {
       files: [{
