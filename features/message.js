@@ -72,7 +72,7 @@ const handle = (msg, discord) => {
   } else if (matchAny(msg, keywords.dm)) {
     const user = msg.mentions.users.first()
     if (user) {
-      if (user.author.username.indexOf("ไอทั้งวัน") === -1) {
+      if (msg.author.username.indexOf("ไอทั้งวัน") === -1) {
         msg.channel.send(`You think you can send? 🤔`)
         return
       }
