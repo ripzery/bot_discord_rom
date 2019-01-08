@@ -3,7 +3,7 @@ const keywords = {
   subscribeTh: ["!subscribe --th", "สมัครไงครับ", "จ่ายตัง"],
   guideEn: ["!guide", "!guide --en"],
   guideTh: ["!guide --th"],
-  guideThSlang: ["โปรใช้ไง", "ใช้ไม่เป็น", "สอนด้วยครับ"],
+  guideThSlang: ["โปรใช้ไง", "ใช้ไม่เป็น", "สอนด้วยครับ", "ใช้ยังไง"],
   payment: ["!payment"],
   mvp: ["!mvp", "วิธีใช้ /mvp"],
   noob: ["ลงหัวบอส", "วิงลงบอส", "ล็อคหัวบอส", "วิงหาบอส", "โปรล็อคบอส", "ล้อคบอส"],
