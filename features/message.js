@@ -10,7 +10,8 @@ const keywords = {
   read: ["!read"],
   helpEn: ["!help", "!help --en"],
   helpTh: ["!help --th"],
-  ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง", "ใครโดนแล้วบ้าง"]
+  ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง", "ใครโดนแล้วบ้าง"],
+  dm: ["!dm"]
 }
 
 const ch = (msg, name) => msg.guild.channels.find(channel => channel.name === name).toString();
@@ -68,6 +69,12 @@ const handle = (msg, discord) => {
         name: "read.jpg"
       }]
     })
+  } else if (matchExactAny(msg, keywords.dm)) {
+    const user = msg.mentions.users.first()
+    if (user) {
+      const msgs = msg.content.split(" ").slice(2).join(" ")
+      user.send(msgs)
+    }
   } else if (matchExactAny(msg, keywords.helpTh)) {
     msg.channel.send(`
       คำสั่งที่ใช้ได้:
