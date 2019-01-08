@@ -18,7 +18,6 @@ client.on('guildMemberAdd', member => {
   welcome.handle(member)
 });
 
-
 client.login(auth.token);
 
 http.createServer(function (req, res) {
