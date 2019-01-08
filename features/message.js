@@ -7,7 +7,8 @@ const keywords = {
   mvp: ["!mvp", "วิธีใช้ /mvp"],
   noob: ["!noob", "ลงหัวบอส"],
   read: ["!read"],
-  help: ["!help --th"],
+  helpEn: ["!help", "!help --en"],
+  helpTh: ["!help --th"],
   ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง"]
 }
 
@@ -19,54 +20,54 @@ const matchAny = (msg, keywords) => keywords.find(k => msg.content.indexOf(k) > 
 
 const handle = (msg, discord) => {
   if (matchExactAny(msg, keywords.subscribeEn)) {
-    msg.channel.send("Here it is", { 
-      files: [{ 
+    msg.channel.send("Here it is", {
+      files: [{
         attachment: "assets/subscribe_en.jpg",
         name: "subscribe_en.jpg"
       }]
     });
   } else if (matchExactAny(msg, keywords.subscribeTh)) {
-    msg.channel.send("อ่านก่อนนะหนู", { 
-      files: [{ 
+    msg.channel.send("อ่านก่อนนะหนู", {
+      files: [{
         attachment: "assets/subscribe_th.jpg",
-        name: "subscribe_th.jpg" 
+        name: "subscribe_th.jpg"
       }]
     });
   } else if (matchExactAny(msg, keywords.guideTh)) {
     msg.channel.send(`https://docs.google.com/document/d/1SlelM4TMurmxE_LzoObMnPwtgLaoWe9dcBHVHlBoRgA/ \nดูเพิ่มได้ที่ ${ch(msg, 'faqs-guides')} กับ ${ch(msg, 'download')} นะครับ`);
-  } else if(matchExactAny(msg, keywords.guideEn)) {
+  } else if (matchExactAny(msg, keywords.guideEn)) {
     msg.channel.send(`https://xkromui.com/features.html \nMore information at ${ch(msg, 'faqs-guides')} and ${ch(msg, 'download')}`);
-  } else if(matchExactAny(msg, keywords.payment)) {
+  } else if (matchExactAny(msg, keywords.payment)) {
     msg.channel.send(`Hey, look at https://xkromui.com/subscribe/`)
-  } else if(matchAny(msg, keywords.ban)) {
-    msg.channel.send(`กูเนี่ยแหละโดนแบน จะถามให้ช้ำใจกันทำไมม ~`, { 
-      files: [{ 
+  } else if (matchAny(msg, keywords.ban)) {
+    msg.channel.send(`กูเนี่ยแหละโดนแบน จะถามให้ช้ำใจกันทำไมม ~`, {
+      files: [{
         attachment: "assets/ban.jpg",
-        name: "ban.jpg" 
+        name: "ban.jpg"
       }]
     })
-  } else if(matchExactAny(msg, keywords.noob)) {
+  } else if (matchExactAny(msg, keywords.noob)) {
     msg.channel.send(`พูดอีกที พูดอีกที พูดอีกทีได้หรือเปล่า \nฉันไม่ได้ฟัง ที่อยากจะฟังมาตั้งนาน~`, {
-      files: [{ 
+      files: [{
         attachment: "assets/noob.jpg",
-        name: "noob.jpg" 
+        name: "noob.jpg"
       }]
     })
-  } else if(matchExactAny(msg, keywords.mvp)) {
+  } else if (matchExactAny(msg, keywords.mvp)) {
     msg.channel.send(`อ่านวิธีใช้คำสั่ง /mvp ตรงนี้นะหนู`, {
-      files: [{ 
+      files: [{
         attachment: "assets/mvp.jpg",
-        name: "mvp.jpg" 
+        name: "mvp.jpg"
       }]
     })
-  } else if(matchExactAny(msg, keywords.read)) {
+  } else if (matchExactAny(msg, keywords.read)) {
     msg.channel.send(`อ่าน channels นี้ก่อนนะ`, {
-      files: [{ 
+      files: [{
         attachment: "assets/read.jpg",
-        name: "read.jpg" 
+        name: "read.jpg"
       }]
     })
-  } else if(matchExactAny(msg, keywords.help)) {
+  } else if (matchExactAny(msg, keywords.helpTh)) {
     msg.channel.send(`
       คำสั่งที่ใช้ได้:
 \`\`\`
@@ -78,6 +79,15 @@ const handle = (msg, discord) => {
 !mvp, วิธีใช้ /mvp : วิธีใช้คำสั่ง /mvp
 !noob, ลงหัวบอส : อะไรไม่สามารถทำได้
 !read : อ่าน channel #faqs-guides กับ #download
+\`\`\`
+    `)
+  } else if (matchExactAny(msg, keywords.helpEn)) {
+    msg.channel.send(`
+      Available commands:
+\`\`\`
+!subscribe : Show subscription guide.
+!guide : Link to feature page.
+!payment : Link to subscription page.
 \`\`\`
     `)
   }
