@@ -5,12 +5,6 @@ const welcome = require('./features/welcome.js')
 const message = require('./features/message.js')
 const client = new Discord.Client();
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write('Welcome to forever blank ROM-UI Bot page!');
-  res.end();
-}).listen(5000);
-
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -26,3 +20,9 @@ client.on('guildMemberAdd', member => {
 
 
 client.login(auth.token);
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write('Welcome to forever blank ROM-UI Bot page!');
+  res.end();
+}).listen(process.env.PORT || 5000);

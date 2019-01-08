@@ -1,5 +1,5 @@
 const handle = (msg, discord) => {
-  console.log(msg.mentions)
+  // console.log(msg.mentions)
   if (msg.content.indexOf("/subscribe --en") === 0 || msg.content === "/subscribe") {
     msg.channel.send("", { 
       files: [{ 
