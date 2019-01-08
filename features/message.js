@@ -5,7 +5,7 @@ const keywords = {
   guideTh: ["!guide --th"],
   payment: ["!payment"],
   mvp: ["!mvp", "วิธีใช้ /mvp"],
-  noob: ["!noob"],
+  noob: ["!noob", "ลงหัวบอส"],
   read: ["!read"],
   ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง"]
 }
