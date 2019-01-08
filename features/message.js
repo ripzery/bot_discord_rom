@@ -13,7 +13,8 @@ const keywords = {
   helpTh: ["!help --th"],
   ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง", "ใครโดนแล้วบ้าง"],
   dm: ["!dm"],
-  map: ["!map"]
+  map: ["!map"],
+  aggressive: ["ไอ้สัส", "ไอ่สัส", "ควย", "เหี้ย "]
 }
 
 const ch = (msg, name) => msg.guild.channels.find(channel => channel.name === name).toString();
@@ -50,6 +51,8 @@ const handle = (msg, discord) => {
     msg.channel.send(`https://xkromui.com/features.html \nMore information at ${ch(msg, 'faqs-guides')} and ${ch(msg, 'download')}`);
   } else if (matchExactAny(msg, keywords.payment)) {
     msg.channel.send(`Hey, look at https://xkromui.com/subscribe/`)
+  } else if (matchAny(msg, keywords.aggressive)) {
+    msg.reply(`อ่าว ไอ้เหี้ย ควยไรล่ะ อีดอก พ่อมึงตาย ปล.โปรดใช้ภาษาให้สุภาพนะครับ :)`)
   } else if (matchAny(msg, keywords.ban)) {
     msg.channel.send(`กูเนี่ยแหละโดนแบน จะถามให้ช้ำใจกันทำไมม ~`, {
       files: [{
