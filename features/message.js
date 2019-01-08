@@ -7,6 +7,7 @@ const keywords = {
   mvp: ["!mvp", "วิธีใช้ /mvp"],
   noob: ["!noob", "ลงหัวบอส"],
   read: ["!read"],
+  help: ["!help --th"],
   ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง"]
 }
 
@@ -65,6 +66,20 @@ const handle = (msg, discord) => {
         name: "read.jpg" 
       }]
     })
+  } else if(matchExactAny(msg, keywords.help)) {
+    msg.channel.send(`
+      คำสั่งที่ใช้ได้:
+\`\`\`
+!subscribe : วิธีสมัคร add-on ภาษาอังกฤษ
+!subscribe --th : วิธีสมัคร add-on ภาษาไทย
+!guide : ลิ้งค์คู่มือภาษาอังกฤษ
+!guide --en : ลิ้งค์คู่มือภาษาไทย
+!payment : ลิ้งค์หน้าก่อนชำระเงิน
+!mvp, วิธีใช้ /mvp : วิธีใช้คำสั่ง /mvp
+!noob, ลงหัวบอส : อะไรไม่สามารถทำได้
+!read : อ่าน channel #faqs-guides กับ #download
+\`\`\`
+    `)
   }
 }
 
