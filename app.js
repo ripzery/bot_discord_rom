@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const http = require('http');
-const auth = require('./auth.json')
 const welcome = require('./features/welcome.js')
 const message = require('./features/message.js')
 const client = new Discord.Client();
@@ -18,7 +17,7 @@ client.on('guildMemberAdd', member => {
   welcome.handle(member)
 });
 
-client.login(auth.token);
+client.login(process.env.AUTH_KEY);
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
