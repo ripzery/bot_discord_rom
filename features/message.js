@@ -1,7 +1,7 @@
 const keywords = {
   subscribeEn: ["!subscribe --en", "!subscribe"],
   subscribeTh: ["!subscribe --th"],
-  subscribeThSlang: ["สมัครไงครับ", "จ่ายตัง", "redeem code ยังไง", "redeem ยังไง"],
+  subscribeThSlang: ["สมัครไง", "สมัครยังไง", "สมัครไงครับ", "จ่ายตัง", "redeem code ยังไง", "redeem ยังไง"],
   guideEn: ["!guide", "!guide --en"],
   guideTh: ["!guide --th"],
   guideThSlang: ["โปรใช้ไง", "ใช้ไม่เป็น", "สอนด้วยครับ", "ใช้ยังไง"],
@@ -38,7 +38,7 @@ const handle = (msg, discord) => {
       }]
     });
   } else if (matchAny(msg, keywords.subscribeThSlang)) {
-    msg.channel.send("วิธีสมัครตามรูปด้านล่างเลยครับ ราคา 5.53 USD โดยรองรับผ่าน Paypal \nแต่ถ้าอยากสะดวกจ่ายผ่าน TrueMoney Wallet ได้หรือบ้านรวยอยากจ่ายแพงๆ ก็มีคนขายจ้า ชื่อ \"ขาย Code Add-on\" อะไรสักอย่างเนี่ยแหละ", {
+    msg.channel.send("วิธีสมัครตามรูปด้านล่างเลยครับ ราคา 5.53 USD โดยรองรับผ่าน Paypal \nแต่ถ้าอยากสะดวกจ่ายผ่าน TrueMoney Wallet ได้หรือบ้านรวยอยากจ่ายเยอะๆ ก็มีคนขายจ้า ชื่อ \"ขาย Code Add-on\" อะไรสักอย่างเนี่ยแหละ", {
       files: [{
         attachment: "assets/subscribe_th.jpg",
         name: "subscribe_th.jpg"
