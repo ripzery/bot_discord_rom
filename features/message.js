@@ -51,7 +51,7 @@ const handle = (msg, discord) => {
     })
   } else if (matchExactAny(msg, keywords.map)) {
     msg.channel.send(`
-    รายชื่อแมพทั้งหมด
+  รายชื่อแมพทั้งหมด
 \`\`\`
 วิธีใช้พิมพ์ /go ตามด้วย id เช่น /go 1 ไปพรอนเทร่า, /go 9 ไป Ghost Ship
 
