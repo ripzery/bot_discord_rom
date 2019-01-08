@@ -21,7 +21,7 @@ const handle = (msg, discord) => {
     msg.channel.send("Here it is", { 
       files: [{ 
         attachment: "assets/subscribe_en.jpg",
-        name: "subscribe_en.jpg" 
+        name: "subscribe_en.jpg"
       }]
     });
   } else if (matchExactAny(msg, keywords.subscribeTh)) {
@@ -32,9 +32,9 @@ const handle = (msg, discord) => {
       }]
     });
   } else if (matchExactAny(msg, keywords.guideTh)) {
-    msg.channel.send(`https://docs.google.com/document/d/1SlelM4TMurmxE_LzoObMnPwtgLaoWe9dcBHVHlBoRgA/ \nดูเพิ่มได้ที่ ${ch(msg, 'faq-guides')} กับ ${ch(msg, 'download')} นะครับ`);
+    msg.channel.send(`https://docs.google.com/document/d/1SlelM4TMurmxE_LzoObMnPwtgLaoWe9dcBHVHlBoRgA/ \nดูเพิ่มได้ที่ ${ch(msg, 'faqs-guides')} กับ ${ch(msg, 'download')} นะครับ`);
   } else if(matchExactAny(msg, keywords.guideEn)) {
-    msg.channel.send(`https://xkromui.com/features.html \nMore information at ${ch(msg, 'faq-guides')} and ${ch(msg, 'download')}`);
+    msg.channel.send(`https://xkromui.com/features.html \nMore information at ${ch(msg, 'faqs-guides')} and ${ch(msg, 'download')}`);
   } else if(matchExactAny(msg, keywords.payment)) {
     msg.channel.send(`Hey, look at https://xkromui.com/subscribe/`)
   } else if(matchAny(msg, keywords.ban)) {
