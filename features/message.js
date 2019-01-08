@@ -3,6 +3,7 @@ const keywords = {
   subscribeTh: ["!subscribe --th", "สมัครไงครับ", "จ่ายตัง"],
   guideEn: ["!guide", "!guide --en"],
   guideTh: ["!guide --th"],
+  guideThSlang: ["โปรใช้ไง", "ใช้ไม่เป็น", "สอนด้วยครับ"],
   payment: ["!payment"],
   mvp: ["!mvp", "วิธีใช้ /mvp"],
   noob: ["ลงหัวบอส", "วิงลงบอส", "ล็อคหัวบอส", "วิงหาบอส", "โปรล็อคบอส", "ล้อคบอส"],
@@ -33,7 +34,7 @@ const handle = (msg, discord) => {
         name: "subscribe_th.jpg"
       }]
     });
-  } else if (matchExactAny(msg, keywords.guideTh)) {
+  } else if (matchExactAny(msg, keywords.guideTh) || matchAny(msg, keywords.guideThSlang)) {
     msg.channel.send(`https://docs.google.com/document/d/1SlelM4TMurmxE_LzoObMnPwtgLaoWe9dcBHVHlBoRgA/ \nดูเพิ่มได้ที่ ${ch(msg, 'faqs-guides')} กับ ${ch(msg, 'download')} นะครับ`);
   } else if (matchExactAny(msg, keywords.guideEn)) {
     msg.channel.send(`https://xkromui.com/features.html \nMore information at ${ch(msg, 'faqs-guides')} and ${ch(msg, 'download')}`);
