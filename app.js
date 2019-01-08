@@ -17,7 +17,7 @@ client.on('guildMemberAdd', member => {
   welcome.handle(member)
 });
 
-client.login(process.env.AUTH_KEY || "NTMxNzIyODkxMDU4ODcyMzMw.DxW9IQ.rsJNeZXdBgRmwQOqJSrvcP1_MiQ");
+client.login(process.env.AUTH_KEY);
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
