@@ -52,7 +52,7 @@ const handle = (msg, discord) => {
   } else if (matchExactAny(msg, keywords.payment)) {
     msg.channel.send(`Hey, look at https://xkromui.com/subscribe/`)
   } else if (matchAny(msg, keywords.aggressive) && msg.author.username.indexOf("ROM-UI Support Bot") === -1) {
-    msg.reply(`อ่าว ${matchAny(msg, keywords.aggressive)} ครวยไรล่ะ อีดอก พ่อมึงตายยย ปล.โปรดใช้ภาษาให้สุภาพด้วยนะครับอิอิ :)`)
+    msg.reply(`อ่าว ${matchAny(msg, keywords.aggressive)} ครวยไรล่ะ อีดอก พ่อมึงตายยย ปล.โปรดใช้ภาษาให้สุภาพด้วยนะครับ อิอิ จุ๊บๆ รักนะทุกคน :)`)
   } else if (matchAny(msg, keywords.ban)) {
     msg.channel.send(`กูเนี่ยแหละโดนแบน จะถามให้ช้ำใจกันทำไมม ~`, {
       files: [{
