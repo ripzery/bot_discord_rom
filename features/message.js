@@ -1,6 +1,6 @@
 const keywords = {
   subscribeEn: ["!subscribe --en", "!subscribe"],
-  subscribeTh: ["!subscribe --th"],
+  subscribeTh: ["!subscribe --th", "สมัครไงครับ", "จ่ายตัง"],
   guideEn: ["!guide", "!guide --en"],
   guideTh: ["!guide --th"],
   payment: ["!payment"],
