@@ -9,7 +9,7 @@ const keywords = {
   read: ["!read"],
   helpEn: ["!help", "!help --en"],
   helpTh: ["!help --th"],
-  ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง"]
+  ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง", "ใครโดนแล้วบ้าง"]
 }
 
 const ch = (msg, name) => msg.guild.channels.find(channel => channel.name === name).toString();
