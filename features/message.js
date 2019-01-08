@@ -14,7 +14,7 @@ const keywords = {
   ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง", "ใครโดนแล้วบ้าง"],
   dm: ["!dm"],
   map: ["!map"],
-  aggressive: ["ไอ้สัส", "ไอ่สัส", "ควย", "เหี้ย "]
+  aggressive: ["ไอ้สัส", "ไอ่สัส", "ควย", "เหี้ย", "พ่อง", "พ่อมึง"]
 }
 
 const ch = (msg, name) => msg.guild.channels.find(channel => channel.name === name).toString();
@@ -52,7 +52,7 @@ const handle = (msg, discord) => {
   } else if (matchExactAny(msg, keywords.payment)) {
     msg.channel.send(`Hey, look at https://xkromui.com/subscribe/`)
   } else if (matchAny(msg, keywords.aggressive)) {
-    msg.reply(`อ่าว ไอ้เหี้ย ควยไรล่ะ อีดอก พ่อมึงตาย ปล.โปรดใช้ภาษาให้สุภาพนะครับ :)`)
+    msg.reply(`อ่าว ไอ้สาสสส ครวยไรล่ะ อีดอก พ่อมึงตาย ปล.โปรดใช้ภาษาให้สุภาพด้วยนะครับอิอิ :)`)
   } else if (matchAny(msg, keywords.ban)) {
     msg.channel.send(`กูเนี่ยแหละโดนแบน จะถามให้ช้ำใจกันทำไมม ~`, {
       files: [{
