@@ -20,6 +20,13 @@ const handle = (msg, discord) => {
     msg.channel.send(`https://xkromui.com/features.html`);
   } else if(msg.content.indexOf("/payment") === 0) {
     msg.channel.send(`https://xkromui.com/subscribe/`)
+  } else if(msg.content.indexOf("มีใครโดนแบน") > -1) {
+    msg.channel.send(`กูเนี่ยแหละโดนแบน จะถามให้ช้ำใจกันทำไมม ~`, { 
+      files: [{ 
+        attachment: "assets/ban.jpg",
+        name: "ban.jpg" 
+      }]
+    })
   }
 }
 
