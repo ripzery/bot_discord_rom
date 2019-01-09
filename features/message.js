@@ -14,7 +14,7 @@ const keywords = {
   ban: ["ใครโดนแบน", "โดนแบนเหรอ", "โดนแบนบ้าง", "ใครโดนแล้วบ้าง"],
   dm: ["!dm"],
   map: ["!map"],
-  aggressive: ["ไอ้สัส", "ไอ่สัส", "ควย", "เหี้ย", "พ่อง", "พ่อมึง", "สัสเอ้ย", "แม่ง", "แม่เย็ด"]
+  aggressive: ["ไอ้สัส", "ไอ่สัส", "ควย", "เหี้ย", "พ่อง", "พ่อมึง", "แม่เย็ด"]
 }
 
 const ch = (msg, name) => msg.guild.channels.find(channel => channel.name === name).toString();
